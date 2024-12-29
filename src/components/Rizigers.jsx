@@ -7,6 +7,7 @@ import StarRating from "./StarRating";
 import { PiCalendar } from "react-icons/pi";
 import { PiAirplaneThin } from "react-icons/pi";
 import { PiBus } from "react-icons/pi";
+import { HiOutlineInformationCircle } from "react-icons/hi";
 
 function Rizigers({ setActiveStage }) {
   const options = [
@@ -17,7 +18,7 @@ function Rizigers({ setActiveStage }) {
   ];
 
   return (
-    <section className="mb-40 flex gap-x-40">
+    <section className="mb-40 flex gap-x-36">
       <div className="w-3/5">
         <h1 className="text-5xl text-dark-brown font-[700] pb-8">Reizigers</h1>
         <p className="text-xl text-dark-gray pb-10">
@@ -199,24 +200,40 @@ function Rizigers({ setActiveStage }) {
         <div className="sticky top-6">
           <div className="mb-5 rounded-3xl overflow-hidden">
             <div className="w-full h-44 bg-cover bg-center" style={{ backgroundImage: `url(${blackrock})` }} />
-            <div className="p-5 bg-light-brown-10">
+            <div className="py-5 px-6 bg-light-brown-10 text-dark-brown">
               <h3 className="text-2xl mb-1">Anjum Hotel Makkah</h3>
               <div className="flex items-center mb-3 text-lg"><FaLocationDot className="mr-1" /><span className="">Makkah</span> <span className="mx-2">|</span> <StarRating className="" count={5} /> <span className="ml-2">(348 reviews)</span></div>
               <div className="flex items-center text-lg"><PiCalendar className="mr-3" /> <span className="text-dark-text">wo 29 jan - di 09 feb 2025 <span className="text-light-brown">(11 dagen)</span></span></div>
-              <div className="flex items-center text-lg"><PiAirplaneThin className="mr-3" /> <span className="text-dark-text">Vliegtickets</span> <span className="mx-2">+</span> <PiBus className="mr-3" /> <span className="text-dark-text">Transfer</span></div>
+              <div className="flex items-center text-lg mb-5"><PiAirplaneThin className="mr-3" /> <span className="text-dark-text">Vliegtickets</span> <span className="mx-2">+</span> <PiBus className="mr-3" /> <span className="text-dark-text">Transfer</span></div>
+              <Link to="/" onClick={() => setActiveStage(2)}>
+                  <div className="mb-5 border-2 border-dark-brown flex w-full items-center justify-center pl-16 px-12 py-4 rounded-full cursor-pointer">
+                      <p className="text-dark-brown mr-2 font-bold">
+                        Toon reisdetails
+                      </p>
+                  </div>
+              </Link>
+              <h3 className="text-2xl mb-2">Prijsoverzicht</h3>
+              <div className="font-bold flex items-center justify-between mb-2"><span>2 × €629 per persoon</span><span>€1.258</span></div>
+              <div className="flex items-center justify-between mb-2"><span className="flex items-center">SGR-garantiefonds (€10,00) <HiOutlineInformationCircle className="ml-1 cursor-pointer text-lg text-light-brown" /></span><span className="font-bold">INCLUSIEF</span></div>
+              <div className="flex items-center justify-between mb-2"><span>Geen boekingskosten</span><span className="font-bold">€0</span></div>
+              <div className="flex items-center justify-between mb-2"><span className="flex items-center">Handbagage <HiOutlineInformationCircle className="ml-1 cursor-pointer text-lg text-light-brown" /></span><span className="font-bold">INCLUSIEF</span></div>
+              <div className="font-bold flex justify-between mb-2"><span>Korting</span><span className="py-2 px-3 rounded-xl border-border-gray border bg-euro-cyan text-euro-text-green">- €250</span></div>
+              <div className="w-full border border-border-gray mb-6"/>
+              <div className="font-bold flex justify-between mb-2"><span className="text-2xl mb-2">Totaal 2 personen</span><span className="text-2xl">1.008,00</span></div>
+              <div className="mb-2"><span>* Bij deze lage prijs is geen aanbetaling mogelijk.</span></div>
             </div>
           </div>
           <Link to="/overzicht" onClick={() => setActiveStage(2)}>
-              <div className="mb-5 bg-dark-brown flex w-full items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer">
-                  <p className="text-white mr-2 text-sm">
+              <div className="mb-5 border-2 bg-dark-brown border-dark-brown flex w-full items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer">
+                  <p className="text-white mr-2">
                     Ga verder naar overzicht en betalen
                   </p>
                   <IoIosArrowForward className="text-white w-6 h-6" />
               </div>
           </Link>
-          <Link to="/overzicht" onClick={() => setActiveStage(2)}>
+          <Link to="/" onClick={() => setActiveStage(2)}>
               <div className="mb-5 border-2 border-dark-brown flex w-full items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer">
-                  <p className="text-dark-brown mr-2 text-sm">
+                  <p className="text-dark-brown mr-2">
                     Vraag een offerte aan
                   </p>
                   <IoIosArrowForward className="text-dark-brown w-6 h-6" />

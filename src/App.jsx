@@ -13,7 +13,7 @@ function App() {
     <div>
       <Router>
         <Header />
-        <section className="max-w-[1440px] m-auto">
+        <section className="max-w-[1200px] m-auto responsive">
           <Stages activeStage={activeStage} setActiveStage={setActiveStage} />
           <Routes>
             <Route path="/" element={<Rizigers setActiveStage={setActiveStage} />} />

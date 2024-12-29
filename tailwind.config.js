@@ -15,6 +15,8 @@ export default {
         "border-gray": "#E8E8E8",
         "dark-text": "#495560",
         "golden-star": "#FFA432",
+        "euro-cyan": "#DDFDE6",
+        "euro-text-green": "#245D3A",
       }
     },
   },
