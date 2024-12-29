@@ -1,0 +1,17 @@
+function Header() {
+    return (
+        <section className="border-b">
+            <section className="flex justify-between items-center py-8 max-w-[1440px] m-auto">
+                <div className="">
+                    <img src="https://dummyimage.com/90x36/000/fff" alt="" />
+                </div>
+                <div className="flex items-center bg-light-brown px-5 py-3 rounded-full cursor-pointer">
+                    <p className="mr-1 text-white">Terug naar pakket</p>
+                    <img className="rounded-full" src="https://dummyimage.com/16x16/fff/000&text=x" alt="" />
+                </div>
+            </section>
+        </section>
+    )
+}
+
+export default Header;
