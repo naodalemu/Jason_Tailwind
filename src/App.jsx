@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/header";
+import Header from "./components/Header";
 import Stages from "./components/Stages";
 import "./App.css";
 import Rizigers from "./components/Rizigers";
