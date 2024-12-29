@@ -1,6 +1,12 @@
 import CustomSelect from "./CustomSelect";
-import { RiArrowDropRightLine } from "react-icons/ri";
+import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
+import blackrock from "../assets/blackrock.png"
+import { FaLocationDot } from "react-icons/fa6";
+import StarRating from "./StarRating";
+import { PiCalendar } from "react-icons/pi";
+import { PiAirplaneThin } from "react-icons/pi";
+import { PiBus } from "react-icons/pi";
 
 function Rizigers({ setActiveStage }) {
   const options = [
@@ -180,18 +186,42 @@ function Rizigers({ setActiveStage }) {
         </div>
 
         <Link to="/overzicht" onClick={() => setActiveStage(2)}>
-            <div className="bg-dark-brown flex w-fit items-center justify-center pl-16 px-12 py-2.5 rounded-full cursor-pointer">
-                <p className="text-white mr-2">
+            <div className="bg-dark-brown flex w-fit items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer">
+                <p className="text-white mr-2 text-sm">
                     Naar verder naar Overzicht en betalen
                 </p>
-                <RiArrowDropRightLine className="text-white w-10 h-10" />
+                <IoIosArrowForward className="text-white w-6 h-6" />
             </div>
         </Link>
 
       </div>
       <div className="w-2/5">
         <div className="sticky top-6">
-          
+          <div className="mb-5 rounded-3xl overflow-hidden">
+            <div className="w-full h-44 bg-cover bg-center" style={{ backgroundImage: `url(${blackrock})` }} />
+            <div className="p-5 bg-light-brown-10">
+              <h3 className="text-2xl mb-1">Anjum Hotel Makkah</h3>
+              <div className="flex items-center mb-3 text-lg"><FaLocationDot className="mr-1" /><span className="">Makkah</span> <span className="mx-2">|</span> <StarRating className="" count={5} /> <span className="ml-2">(348 reviews)</span></div>
+              <div className="flex items-center text-lg"><PiCalendar className="mr-3" /> <span className="text-dark-text">wo 29 jan - di 09 feb 2025 <span className="text-light-brown">(11 dagen)</span></span></div>
+              <div className="flex items-center text-lg"><PiAirplaneThin className="mr-3" /> <span className="text-dark-text">Vliegtickets</span> <span className="mx-2">+</span> <PiBus className="mr-3" /> <span className="text-dark-text">Transfer</span></div>
+            </div>
+          </div>
+          <Link to="/overzicht" onClick={() => setActiveStage(2)}>
+              <div className="mb-5 bg-dark-brown flex w-full items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer">
+                  <p className="text-white mr-2 text-sm">
+                    Ga verder naar overzicht en betalen
+                  </p>
+                  <IoIosArrowForward className="text-white w-6 h-6" />
+              </div>
+          </Link>
+          <Link to="/overzicht" onClick={() => setActiveStage(2)}>
+              <div className="mb-5 border-2 border-dark-brown flex w-full items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer">
+                  <p className="text-dark-brown mr-2 text-sm">
+                    Vraag een offerte aan
+                  </p>
+                  <IoIosArrowForward className="text-dark-brown w-6 h-6" />
+              </div>
+          </Link>
         </div>
       </div>
     </section>
