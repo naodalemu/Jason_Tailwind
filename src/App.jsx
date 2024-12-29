@@ -13,12 +13,14 @@ function App() {
     <div>
       <Router>
         <Header />
-        <section className="max-w-[1200px] m-auto responsive">
-          <Stages activeStage={activeStage} setActiveStage={setActiveStage} />
-          <Routes>
-            <Route path="/" element={<Rizigers setActiveStage={setActiveStage} />} />
-            <Route path="/overzicht" element={<Overzicht />} />
-          </Routes>
+        <section className="px-32">  
+          <section className="xl:max-w-[1200px] 2xl:max-w-[1440px] m-auto">
+            <Stages activeStage={activeStage} setActiveStage={setActiveStage} />
+            <Routes>
+              <Route path="/" element={<Rizigers setActiveStage={setActiveStage} />} />
+              <Route path="/overzicht" element={<Overzicht />} />
+            </Routes>
+          </section>
         </section>
       </Router>
     </div>
