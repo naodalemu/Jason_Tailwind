@@ -18,8 +18,8 @@ function Rizigers({ setActiveStage }) {
   ];
 
   return (
-    <section className="mb-40 flex gap-x-36">
-      <div className="w-3/5">
+    <section className="mb-10 sm:mb-40 flex flex-col lg:flex-row gap-x-10 lg:gap-x-20 xl:gap-x-36">
+      <div className="w-full lg:w-3/5 mb-10">
         <h1 className="text-5xl text-dark-brown font-[700] pb-8">Reizigers</h1>
         <p className="text-xl text-dark-gray pb-10">
           Vul jouw persoonlijke gegevens in. Deze komen o.a. op je (vlieg)ticket
@@ -126,17 +126,17 @@ function Rizigers({ setActiveStage }) {
           <div className="mb-4">
             <input
               type="text"
-              className="mt-1 blcok w-1/2 mr-5 px-5 py-4 bg-light-gray border-border-gray border rounded-xl focus:outline-none text-lg placeholder-gray-700"
+              className="my-2 blcok w-full sm:w-1/2 mr-4 px-5 py-4 bg-light-gray border-border-gray border rounded-xl focus:outline-none text-lg placeholder-gray-700"
               placeholder="Postcode"
             />
             <input
               type="text"
-              className="mt-1 blcok w-36 mr-5 px-5 py-4 bg-light-gray border-border-gray border rounded-xl focus:outline-none text-lg placeholder-gray-700"
+              className="my-2 blcok w-full sm:w-28 md:w-36 lg:w-32 xl:w-40 mr-4 px-5 py-4 bg-light-gray border-border-gray border rounded-xl focus:outline-none text-lg placeholder-gray-700"
               placeholder="Huisnummer"
             />
             <input
               type="text"
-              className="mt-1 blcok w-36 px-5 py-4 bg-light-gray border-border-gray border rounded-xl focus:outline-none text-lg placeholder-gray-700"
+              className="my-2 blcok w-full sm:w-28 md:w-36 lg:w-32 xl:w-40 px-5 py-4 bg-light-gray border-border-gray border rounded-xl focus:outline-none text-lg placeholder-gray-700"
               placeholder="Toevoeging"
             />
           </div>
@@ -196,10 +196,10 @@ function Rizigers({ setActiveStage }) {
         </Link>
 
       </div>
-      <div className="w-2/5">
+      <div className="w-full lg:w-2/5">
         <div className="sticky top-6">
           <div className="mb-5 rounded-3xl overflow-hidden">
-            <div className="w-full h-44 bg-cover bg-center" style={{ backgroundImage: `url(${blackrock})` }} />
+            <div className="w-full h-44 md:h-96 lg:h-44 bg-cover bg-center" style={{ backgroundImage: `url(${blackrock})` }} />
             <div className="py-5 px-6 bg-light-brown-10 text-dark-brown">
               <h3 className="text-2xl mb-1">Anjum Hotel Makkah</h3>
               <div className="flex items-center mb-3 text-lg"><FaLocationDot className="mr-1" /><span className="">Makkah</span> <span className="mx-2">|</span> <StarRating className="" count={5} /> <span className="ml-2">(348 reviews)</span></div>

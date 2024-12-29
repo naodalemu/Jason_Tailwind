@@ -1,7 +1,7 @@
 function Header() {
     return (
-        <section className="border-b px-32">
-            <section className="flex justify-between items-center py-8 max-w-[1200px] m-auto">
+        <section className="border-b px-10 sm:px-20 xl:px-32">
+            <section className="flex justify-between items-center py-8 xl:max-w-[1440px] 2xl:max-w-[1200px] m-auto">
                 <div className="">
                     <img src="https://dummyimage.com/90x36/000/fff" alt="" />
                 </div>
