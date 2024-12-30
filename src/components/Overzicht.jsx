@@ -69,38 +69,38 @@ function Overzicht() {
             <div className="flex flex-col sm:flex-row justify-between">
               <div className="mb-8">
                 <p className="flex items-center font-bold text-xl mb-1"><PiBed className="mr-3 text-3xl" />Verblijf</p>
-                <p className="text-sm mb-8">2 persoonskamer Standaard Suite</p>
+                <p className="text-sm mb-8 text-gray-500">2 persoonskamer Standaard Suite</p>
                 <div className="pl-10 mb-8">
                   <p className="text-xl">Dhr. Bas Kemp</p>
                   <div className="font-bold flex justify-start sm:justify-between"><p className="mr-6">3 mei 1988</p><p>Nederlandse</p></div>
-                  <p className="">✔ Kleine tas 40 x 25 x 20 cm</p>
-                  <p className="">✖ Ruimbagage niet inbegrepen</p>
+                  <p className="text-gray-500">✔ Kleine tas 40 x 25 x 20 cm</p>
+                  <p className="text-gray-500">✖ Ruimbagage niet inbegrepen</p>
                 </div>
                 <div className="pl-10">
                   <p className="text-xl">Jasper Hardeveld</p>
                   <div className="font-bold flex justify-start sm:justify-between"><p className="mr-6">3 mei 1988</p><p>Nederlandse</p></div>
-                  <p className="">✔ Kleine tas 40 x 25 x 20 cm</p>
-                  <p className="">✖ Ruimbagage niet inbegrepen</p>
+                  <p className="text-gray-500">✔ Kleine tas 40 x 25 x 20 cm</p>
+                  <p className="text-gray-500">✖ Ruimbagage niet inbegrepen</p>
                 </div>
               </div>
               <div className="">
                 <div className="mb-8">
                   <p className="flex items-center font-bold text-xl mb-1"><GoPerson className="mr-3 text-3xl" />Contactgegevens</p>
                   <div className="pl-10">
-                    <p>Dhr. Bas Kemp</p>
-                    <p className="flex items-center"><PiPhoneCall className="mr-1" /><span>+316 - 123 45 678</span></p>
-                    <p className="flex items-center"><LuMailOpen className="mr-1" /><span>voorbeeldmail@outlook.com</span></p>
-                    <p>Plantsoenstraat 30</p>
-                    <p>3911 JH Amsterdam</p>
-                    <p>Nederland</p>
+                    <p className="text-gray-500">Dhr. Bas Kemp</p>
+                    <p className="flex items-center"><PiPhoneCall className="mr-1" /><span className="text-gray-500">+316 - 123 45 678</span></p>
+                    <p className="flex items-center"><LuMailOpen className="mr-1" /><span className="text-gray-500">voorbeeldmail@outlook.com</span></p>
+                    <p className="text-gray-500">Plantsoenstraat 30</p>
+                    <p className="text-gray-500">3911 JH Amsterdam</p>
+                    <p className="text-gray-500">Nederland</p>
                   </div>
                 </div>
                 <div>
                   <p className="flex items-center font-bold text-xl mb-1"><PiHeartbeatLight className="mr-3 text-3xl" />Bij noodgevallen</p>
                   <div className="pl-10">
-                    <p>Dhr. Bas Kemp</p>
-                    <p>voorbeeldmail@outlook.com</p>
-                    <p>+316 - 123 45 678</p>
+                    <p className="text-gray-500">Dhr. Bas Kemp</p>
+                    <p className="text-gray-500">voorbeeldmail@outlook.com</p>
+                    <p className="text-gray-500">+316 - 123 45 678</p>
                   </div>
                 </div>
               </div>
@@ -110,9 +110,9 @@ function Overzicht() {
         <div className="mx-auto p-10 sm:py-24 sm:px-40 md:py-32 md:px-52 lg:py-36 lg:px-64 bg-light-brown-10 text-dark-brown rounded-3xl mb-12">
           <h3 className="text-2xl mb-2">Prijsoverzicht</h3>
           <div className="font-bold flex items-center justify-between mb-2"><span>2 × €629 per persoon</span><span>€1.258</span></div>
-          <div className="flex items-center justify-between mb-2"><span className="flex items-center">SGR-garantiefonds (€10,00) <HiOutlineInformationCircle className="ml-1 cursor-pointer text-lg text-light-brown" /></span><span className="font-bold">INCLUSIEF</span></div>
-          <div className="flex items-center justify-between mb-2"><span>Geen boekingskosten</span><span className="font-bold">€0</span></div>
-          <div className="flex items-center justify-between mb-2"><span className="flex items-center">Handbagage <HiOutlineInformationCircle className="ml-1 cursor-pointer text-lg text-light-brown" /></span><span className="font-bold">INCLUSIEF</span></div>
+          <div className="flex items-center justify-between mb-2"><span className="flex items-center text-euro-text-green">SGR-garantiefonds (€10,00) <HiOutlineInformationCircle className="ml-1 cursor-pointer text-lg text-light-brown" /></span><span className="font-bold text-euro-text-green">INCLUSIEF</span></div>
+          <div className="flex items-center justify-between mb-2"><span className="text-euro-text-green">Geen boekingskosten</span><span className="font-bold text-euro-text-green">€0</span></div>
+          <div className="flex items-center justify-between mb-2"><span className="flex items-center text-euro-text-green">Handbagage <HiOutlineInformationCircle className="ml-1 cursor-pointer text-lg text-light-brown" /></span><span className="font-bold text-euro-text-green">INCLUSIEF</span></div>
           <div className="font-bold flex justify-between mb-2"><span>Korting</span><span className="py-2 px-3 rounded-xl border-border-gray border bg-euro-cyan text-euro-text-green">- €250</span></div>
           <div className="w-full border border-border-gray mb-6"/>
           <div className="font-bold flex justify-between mb-2"><span className="text-2xl mb-2">Totaal 2 personen</span><span className="text-2xl">1.008,00</span></div>
