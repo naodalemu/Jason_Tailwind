@@ -11,91 +11,80 @@ function Modal({ isOpen, onClose }) {
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-3xl shadow-lg p-8 w-full sm:w-3/4 max-w-4xl max-h-[500px] overflow-scroll"
+        className="modal-container bg-white rounded-3xl shadow-lg px-16 pt-16 pb-10 w-full sm:w-3/4 max-w-4xl max-h-[550px] overflow-scroll"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-3/5">
-            <h1 className="text-2xl font-bold text-dark-brown mb-6">
+            <h1 className="text-3xl font-bold text-dark-brown mb-6">
               Controleer jou gegevens
             </h1>
-            <p className="text-gray-600 mb-6">
+            <p className="text-lg text-gray-600 mb-6">
               Voor deze aanbieding geldt dat wij een teis achteraf niet kunnen
               wijzigen. Controleer daarom zorgvuldig de namen en geboortedata.
               Namen worden soms verkeerd ingevoerd.
             </p>
 
             <div className="space-y-6">
+
               <div>
-                <h2 className="text-lg font-semibold text-dark-brown">
+                <h2 className="text-2xl font-semibold text-dark-brown">
                   Jasper Hardeveld{" "}
                   <span className="text-light-brown">20 Maart 2003</span>
                 </h2>
-                <div className="mt-4 space-y-2">
-                  <div className="flex">
-                    <input
-                      type="checkbox"
-                      className="mr-3 text-light-brown border-gray-300 rounded focus:ring-light-brown"
-                    />
-                    <label className="text-gray-700">
-                      <span>
-                        Ja, ik heb alleen mijn{" "}
-                        <b>
-                          eerste voornaam volgens paspoort gebruikt en ook mijn
-                          achternaam is correct geschreven
-                        </b>
-                      </span>
-                    </label>
-                  </div>
-                  <div className="flex">
-                    <input
-                      type="checkbox"
-                      className="mr-3 text-light-brown border-gray-300 rounded focus:ring-light-brown"
-                    />
-                    <label className="text-gray-700">
-                      <span>Ja, dit is de correcte geboortedatum</span>
-                    </label>
-                  </div>
+                <div className="mt-4 space-y-2 text-dark-text">
+                  <label className="custom-radio flex items-start cursor-pointer mb-8 relative">
+                    <input type="radio" name="jasper" value="name_correct" className="hidden" />
+                    <span className="custom-radio-curved" />
+                    <span className="text-lg">
+                      Ja, ik heb alleen mijn{" "}
+                      <b>
+                        eerste voornaam volgens paspoort gebruikt en ook mijn achternaam
+                        is correct geschreven
+                      </b>
+                    </span>
+                  </label>
+                  <label className="custom-radio flex items-start cursor-pointer mb-8 relative">
+                    <input type="radio" name="jasper" value="dob_correct" className="hidden" />
+                    <span className="custom-radio-curved" />
+                    <span className="text-lg">
+                      Ja, dit is de correcte geboortedatum
+                    </span>
+                  </label>
                 </div>
               </div>
 
               <div>
-                <h2 className="text-lg font-semibold text-dark-brown">
+                <h2 className="text-2xl font-semibold text-dark-brown">
                   Bas Kemp{" "}
                   <span className="text-light-brown">03 mei 1988</span>
                 </h2>
-                <div className="mt-4 space-y-2">
-                  <div className="flex">
-                    <input
-                      type="checkbox"
-                      className="mr-3 text-light-brown border-gray-300 rounded focus:ring-light-brown"
-                    />
-                    <label className="text-gray-700">
-                      <span>
-                        Ja, ik heb alleen mijn{" "}
-                        <b>
-                          eerste voornaam volgens paspoort gebruikt en ook mijn
-                          achternaam is correct geschreven
-                        </b>
-                      </span>
-                    </label>
-                  </div>
-                  <div className="flex">
-                    <input
-                      type="checkbox"
-                      className="mr-3 text-light-brown border-gray-300 rounded focus:ring-light-brown"
-                    />
-                    <label className="text-gray-700">
-                      <span>Ja, dit is de correcte geboortedatum</span>
-                    </label>
-                  </div>
+                <div className="mt-4 space-y-2 text-dark-text">
+                  <label className="custom-radio flex items-start cursor-pointer mb-8 relative">
+                    <input type="radio" name="bas" value="name_correct" className="hidden" />
+                    <span className="custom-radio-curved" />
+                    <span className="text-lg">
+                      Ja, ik heb alleen mijn{" "}
+                      <b>
+                        eerste voornaam volgens paspoort gebruikt en ook mijn achternaam
+                        is correct geschreven
+                      </b>
+                    </span>
+                  </label>
+                  <label className="custom-radio flex items-start cursor-pointer mb-8 relative">
+                    <input type="radio" name="bas" value="dob_correct" className="hidden" />
+                    <span className="custom-radio-curved" />
+                    <span className="text-lg">
+                      Ja, dit is de correcte geboortedatum
+                    </span>
+                  </label>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="mt-8 flex justify-between items-start w-full md:w-2/5">
-            <div className="bg-light-brown-20 p-10 rounded-3xl text-sm space-y-2 w-full">
+            <div className="bg-light-brown-20 p-10 rounded-3xl text-base space-y-2 w-full">
               <ul className="list-none">
                 <li className="mb-5">
                   ✔ Gebruik alleen je eerste voornaam zoals in je paspoort
@@ -117,13 +106,13 @@ function Modal({ isOpen, onClose }) {
         </div>
 
         <div className="mt-10">
-        <Link to="/overzicht">
-          <button
-            className="w-full bg-dark-brown text-white py-3 rounded-xl text-center font-semibold flex items-center justify-center"
-            onClick={onClose}
-          >
-            Ja, de gegevens kloppen <PiArrowCircleRight className="ml-2 text-xl" />
-          </button>
+          <Link to="/overzicht">
+            <button
+              className="w-full text-sm bg-dark-brown text-white py-3 rounded-full text-center font-semibold flex items-center justify-center"
+              onClick={onClose}
+            >
+              Ja, de gegevens kloppen <PiArrowCircleRight className="ml-2 text-xl" />
+            </button>
           </Link>
         </div>
       </div>

@@ -15,6 +15,7 @@ import { HiOutlineInformationCircle } from "react-icons/hi";
 import { PiShieldCheckLight } from "react-icons/pi";
 import { PiArrowCircleRight } from "react-icons/pi";
 import { Link } from "react-router-dom";
+import ideal from "../assets/ideal.png";
 
 function Overzicht() {
   return (
@@ -69,27 +70,27 @@ function Overzicht() {
             <div className="flex flex-col sm:flex-row justify-between">
               <div className="mb-8">
                 <p className="flex items-center font-bold text-xl mb-1"><PiBed className="mr-3 text-3xl" />Verblijf</p>
-                <p className="text-sm mb-8 text-gray-500">2 persoonskamer Standaard Suite</p>
+                <p className="text-sm pl-10 mb-8 text-gray-500">2 persoonskamer Standaard Suite</p>
                 <div className="pl-10 mb-8">
                   <p className="text-xl">Dhr. Bas Kemp</p>
-                  <div className="font-bold flex justify-start sm:justify-between"><p className="mr-6">3 mei 1988</p><p>Nederlandse</p></div>
-                  <p className="text-gray-500">✔ Kleine tas 40 x 25 x 20 cm</p>
-                  <p className="text-gray-500">✖ Ruimbagage niet inbegrepen</p>
+                  <div className="font-bold flex"><p className="mr-8">3 mei 1988</p><p>Nederlandse</p></div>
+                  <p className="text-sm text-gray-500"><span className="mr-2">✔</span> Kleine tas 40 x 25 x 20 cm</p>
+                  <p className="text-sm text-gray-500"><span className="mr-2">✖</span> Ruimbagage niet inbegrepen</p>
                 </div>
                 <div className="pl-10">
                   <p className="text-xl">Jasper Hardeveld</p>
-                  <div className="font-bold flex justify-start sm:justify-between"><p className="mr-6">3 mei 1988</p><p>Nederlandse</p></div>
-                  <p className="text-gray-500">✔ Kleine tas 40 x 25 x 20 cm</p>
-                  <p className="text-gray-500">✖ Ruimbagage niet inbegrepen</p>
+                  <div className="font-bold flex"><p className="mr-8">3 mei 1988</p><p>Nederlandse</p></div>
+                  <p className="text-sm text-gray-500"><span className="mr-2">✔</span> Kleine tas 40 x 25 x 20 cm</p>
+                  <p className="text-sm text-gray-500"><span className="mr-2">✖</span> Ruimbagage niet inbegrepen</p>
                 </div>
               </div>
               <div className="">
                 <div className="mb-8">
                   <p className="flex items-center font-bold text-xl mb-1"><GoPerson className="mr-3 text-3xl" />Contactgegevens</p>
-                  <div className="pl-10">
-                    <p className="text-gray-500">Dhr. Bas Kemp</p>
-                    <p className="flex items-center"><PiPhoneCall className="mr-1" /><span className="text-gray-500">+316 - 123 45 678</span></p>
-                    <p className="flex items-center"><LuMailOpen className="mr-1" /><span className="text-gray-500">voorbeeldmail@outlook.com</span></p>
+                  <div className="pl-10 text-sm">
+                    <p className="text-gray-500 mb-1">Dhr. Bas Kemp</p>
+                    <p className="flex items-center mb-1"><PiPhoneCall className="mr-1" /><span className="text-gray-500">+316 - 123 45 678</span></p>
+                    <p className="flex items-center mb-1"><LuMailOpen className="mr-1" /><span className="text-gray-500">voorbeeldmail@outlook.com</span></p>
                     <p className="text-gray-500">Plantsoenstraat 30</p>
                     <p className="text-gray-500">3911 JH Amsterdam</p>
                     <p className="text-gray-500">Nederland</p>
@@ -97,18 +98,18 @@ function Overzicht() {
                 </div>
                 <div>
                   <p className="flex items-center font-bold text-xl mb-1"><PiHeartbeatLight className="mr-3 text-3xl" />Bij noodgevallen</p>
-                  <div className="pl-10">
-                    <p className="text-gray-500">Dhr. Bas Kemp</p>
-                    <p className="text-gray-500">voorbeeldmail@outlook.com</p>
-                    <p className="text-gray-500">+316 - 123 45 678</p>
+                  <div className="pl-10 text-sm">
+                    <p className="text-gray-500 mb-1">Dhr. Bas Kemp</p>
+                    <p className="text-gray-500 mb-1">voorbeeldmail@outlook.com</p>
+                    <p className="text-gray-500 mb-1">+316 - 123 45 678</p>
                   </div>
                 </div>
               </div>
             </div>
         </div>
 
-        <div className="mx-auto p-10 sm:py-24 sm:px-40 md:py-32 md:px-52 lg:py-36 lg:px-64 bg-light-brown-10 text-dark-brown rounded-3xl mb-12">
-          <h3 className="text-2xl mb-2">Prijsoverzicht</h3>
+        <div className="mx-auto p-10 sm:py-24 sm:px-32 md:py-32 md:px-52 lg:py-36 lg:px-60 xl:py-32 xl:px-52 bg-light-brown-10 text-dark-brown rounded-3xl mb-20">
+          <h3 className="text-2xl mb-6">Prijsoverzicht</h3>
           <div className="font-bold flex items-center justify-between mb-2"><span>2 × €629 per persoon</span><span>€1.258</span></div>
           <div className="flex items-center justify-between mb-2"><span className="flex items-center text-euro-text-green">SGR-garantiefonds (€10,00) <HiOutlineInformationCircle className="ml-1 cursor-pointer text-lg text-light-brown" /></span><span className="font-bold text-euro-text-green">INCLUSIEF</span></div>
           <div className="flex items-center justify-between mb-2"><span className="text-euro-text-green">Geen boekingskosten</span><span className="font-bold text-euro-text-green">€0</span></div>
@@ -119,36 +120,50 @@ function Overzicht() {
           <div className="mb-2"><span>* Bij deze lage prijs is geen aanbetaling mogelijk.</span></div>
         </div>
 
-        <div className="w-3/4 mb-12 mx-auto">
+        <div className="w-5/6 sm:w-3/4 mb-20 mx-auto">
           <h2 className="text-dark-brown text-3xl font-bold mb-5">Garantie en voorwaarden</h2>
-          <p className="mb-5">✔ Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <p className="mb-5 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum, odio non porta molestie,</p>
-          <div className="mb-5 flex items-center"><p>✔ Veilig boeken, wij zijn aangesloten bij:</p><img src="" alt="IATA" /><img src="" alt="Turkish Airlines" /></div>
-          <p className="mb-5">✔ Ik heb de beschrijving van mijn reis gelezen en ik ben op de hoogte van het actuele reis advies</p>
+          <div className="text-dark-text">
+            <p className="mb-5"><span className="mr-2">✔</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p className="mb-5 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum, odio non porta molestie,</p>
+            <div className="mb-5 flex items-center"><p><span className="mr-2">✔</span> Veilig boeken, wij zijn aangesloten bij:</p><img src="" alt="IATA" /><img src="" alt="Turkish Airlines" /></div>
+            <p className="mb-5"><span className="mr-2">✔</span> Ik heb de <span className="font-bold">beschrijving</span> van mijn reis gelezen en ik ben op de hoogte van het <span className="font-bold">actuele reis advies</span></p>
+          </div>
         </div>
 
-        <div className="mx-auto p-10 bg-dark-brown text-white rounded-3xl mb-16">
+        <div className="mx-auto p-10 bg-dark-brown text-white rounded-3xl mb-16 custom-radio">
           <h2 className="text-2xl flex items-center mb-2"><PiShieldCheckLight className="mr-1 text-light-brown" />Veilig online betalen</h2>
-          <p className="text-xl font-thin mb-5">Je verbinding beveiligd met 256-bits SSl encryptie</p>
-          <h2 className="text-2xl flex items-center mb-2">Extra opties</h2>
-          <div className="flex items-center">
-            <input type="radio" name="extra" id="extra-all" className="mr-2" />
-            <label htmlFor="extra-all">All-inclusive (+ 300,-)</label>
-          </div>
+          <p className="text-xl font-thin mb-8">Je verbinding beveiligd met 256-bits SSl encryptie</p>
+          <h2 className="text-2xl flex items-center mb-6 font-bold">Extra opties</h2>
           <div className="flex items-center mb-5">
-            <input type="radio" name="extra" id="extra-kamer" className="mr-2" />
-            <label htmlFor="extra-kamer">Extra Kamer (+ 700,-)</label>
+            <label className="custom-radio flex items-start cursor-pointer relative">
+              <input type="radio" name="extra" value="all_inclusive" className="hidden" />
+              <span className="custom-radio-curved mr-5" />
+              <span className="text-lg">All-inclusive (+ 300,-)</span>
+            </label>
+          </div>
+          <div className="flex items-center mb-8">
+            <label className="custom-radio flex items-start cursor-pointer relative">
+              <input type="radio" name="extra" value="extra_kamer" className="hidden" />
+              <span className="custom-radio-curved mr-5" />
+              <span className="text-lg">Extra Kamer (+ 700,-)</span>
+            </label>
           </div>
           <div className="px-10 py-6 bg-light-brown-10 rounded-2xl mb-8">Je betaalt: <span className="font-bold">1.008,00</span></div>
           <p className="text-gray-200 mb-5">Seleteer jouw betaalmethode</p>
           <div className="px-10 py-8 bg-light-brown-10 rounded-2xl mb-8">
-            <div className="flex items-center mb-5">
-              <input type="radio" name="Seleteer" id="ideal" className="mr-2" />
-              <label htmlFor="ideal" className="flex items-center"><img className="" src="" alt="" />Ideal</label>
+            <div className="flex items-center mb-8">
+              <label className="custom-radio flex items-start cursor-pointer relative">
+                <input type="radio" name="Seleteer" value="ideal" className="hidden" />
+                <span className="custom-radio-curved custom-radio-circle mr-5" />
+                <span className="text-lg flex items-center"><img className="w-10 mr-5" src={ideal} alt="" />Ideal</span>
+              </label>
             </div>
             <div className="flex items-center mb-8">
-              <input type="radio" name="Seleteer" id="aanbetaling" className="mr-2" />
-              <label htmlFor="aanbetaling">25% aanbetaling <span className="text-xl">(252,-)</span></label>
+              <label className="custom-radio flex items-start cursor-pointer relative">
+                <input type="radio" name="Seleteer" value="aanbetaling" className="hidden" />
+                <span className="custom-radio-curved custom-radio-circle mr-5" />
+                <span className="text-lg">25% aanbetaling <span className="text-xl">(252,-)</span></span>
+              </label>
             </div>
             <Link to="/overzicht">
                 <button

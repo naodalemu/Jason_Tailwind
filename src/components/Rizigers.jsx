@@ -35,13 +35,15 @@ function Rizigers({ setActiveStage }) {
             Volwassene 1 <span className="text-light-brown">(Hoofdboeker)</span>
           </h2>
 
-          <div className="mb-4 flex items-center space-x-4">
+          <div className="mb-4 flex items-center space-x-10 custom-radio">
                 <label className="flex items-center">
-                    <input type="radio" name="gender1" value="De Heer" className="w-6 h-6" />
+                    <input type="radio" name="gender1" value="De Heer" className="hidden" />
+                    <span className="custom-radio-curved custom-radio-circle" />
                     <span className="ml-2 text-lg">De Heer</span>
                 </label>
                 <label className="flex items-center">
-                    <input type="radio" name="gender1" value="Mevrouw" className="w-6 h-6" />
+                    <input type="radio" name="gender1" value="Mevrouw" className="hidden" />
+                    <span className="custom-radio-curved custom-radio-circle" />
                     <span className="ml-2 text-lg">Mevrouw</span>
                 </label>
             </div>
@@ -76,13 +78,15 @@ function Rizigers({ setActiveStage }) {
         <div className="pb-8">
           <h2 className="text-2xl font-[500] mb-8">Volwassene 2</h2>
 
-          <div className="mb-4 flex items-center space-x-4">
+          <div className="mb-4 flex items-center space-x-10 custom-radio">
               <label className="flex items-center">
-                  <input type="radio" name="gender2" value="De Heer" className="w-6 h-6" />
+                  <input type="radio" name="gender2" value="De Heer" className="hidden" />
+                  <span className="custom-radio-curved custom-radio-circle" />
                   <span className="ml-2 text-lg">De Heer</span>
               </label>
               <label className="flex items-center">
-                  <input type="radio" name="gender2" value="Mevrouw" className="w-6 h-6" />
+                  <input type="radio" name="gender2" value="Mevrouw" className="hidden" />
+                  <span className="custom-radio-curved custom-radio-circle" />
                   <span className="ml-2 text-lg">Mevrouw</span>
               </label>
           </div>
