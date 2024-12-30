@@ -10,6 +10,7 @@ export default {
         "dark-brown": "#5A3D1F",
         "light-brown": "#C09F6A",
         "light-brown-10": "#C09F6A1A",
+        "light-brown-20": "#C09F6A33",
         "dark-gray": "#778088",
         "light-gray": "#F4F4F5",
         "border-gray": "#E8E8E8",

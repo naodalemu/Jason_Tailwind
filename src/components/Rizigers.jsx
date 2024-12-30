@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import CustomSelect from "./CustomSelect";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
@@ -8,6 +9,7 @@ import { PiCalendar } from "react-icons/pi";
 import { PiAirplaneThin } from "react-icons/pi";
 import { PiBus } from "react-icons/pi";
 import { HiOutlineInformationCircle } from "react-icons/hi";
+import Modal from "./Modal";
 
 function Rizigers({ setActiveStage }) {
   const options = [
@@ -16,6 +18,8 @@ function Rizigers({ setActiveStage }) {
     { code: "FR", name: "France" },
     { code: "US", name: "United States" },
   ];
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section className="mb-10 sm:mb-40 flex flex-col lg:flex-row gap-x-10 lg:gap-x-20 xl:gap-x-36">
@@ -186,14 +190,12 @@ function Rizigers({ setActiveStage }) {
           </div>
         </div>
 
-        <Link to="/overzicht" onClick={() => setActiveStage(2)}>
-            <div className="bg-dark-brown flex w-fit items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer">
-                <p className="text-white mr-2 text-sm">
-                    Naar verder naar Overzicht en betalen
-                </p>
-                <IoIosArrowForward className="text-white w-6 h-6" />
-            </div>
-        </Link>
+        <div className="bg-dark-brown flex w-fit items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer" onClick={() => setIsModalOpen(true)}>
+            <p className="text-white mr-2 text-sm">
+                Naar verder naar Overzicht en betalen
+            </p>
+            <IoIosArrowForward className="text-white w-6 h-6" />
+        </div>
 
       </div>
       <div className="w-full lg:w-2/5">
@@ -223,24 +225,23 @@ function Rizigers({ setActiveStage }) {
               <div className="mb-2"><span>* Bij deze lage prijs is geen aanbetaling mogelijk.</span></div>
             </div>
           </div>
-          <Link to="/overzicht" onClick={() => setActiveStage(2)}>
-              <div className="mb-5 border-2 bg-dark-brown border-dark-brown flex w-full items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer">
-                  <p className="text-white mr-2">
-                    Ga verder naar overzicht en betalen
-                  </p>
-                  <IoIosArrowForward className="text-white w-6 h-6" />
-              </div>
-          </Link>
-          <Link to="/" onClick={() => setActiveStage(2)}>
-              <div className="mb-5 border-2 border-dark-brown flex w-full items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer">
-                  <p className="text-dark-brown mr-2">
-                    Vraag een offerte aan
-                  </p>
-                  <IoIosArrowForward className="text-dark-brown w-6 h-6" />
-              </div>
-          </Link>
+          <div className="mb-5 border-2 bg-dark-brown border-dark-brown flex w-full items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer" onClick={() => setIsModalOpen(true)}>
+              <p className="text-white mr-2">
+                Ga verder naar overzicht en betalen
+              </p>
+              <IoIosArrowForward className="text-white w-6 h-6" />
+          </div>
+          <div className="mb-5 border-2 border-dark-brown flex w-full items-center justify-center pl-16 px-12 py-5 rounded-full cursor-pointer">
+              <p className="text-dark-brown mr-2">
+                Vraag een offerte aan
+              </p>
+              <IoIosArrowForward className="text-dark-brown w-6 h-6" />
+          </div>
         </div>
       </div>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
     </section>
   );
 }
